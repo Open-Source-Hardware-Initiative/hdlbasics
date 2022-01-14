@@ -3,7 +3,7 @@
 */
 
 module and2(input logic A, B,
-            output logic C)
+            output logic C);
 
     assign C = A & B;
 
