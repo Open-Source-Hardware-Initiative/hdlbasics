@@ -1,9 +1,9 @@
 /*
-* Description : This file contains a testbench for the 2 input OR gate
+* Description : This file contains a testbench for the 2 input and gate
 */
 
 
-module or2_tb();
+module nand2_tb();
 
 
 logic A;
@@ -13,7 +13,7 @@ logic C;
 
 
 //Instantiate Device Under Test
-or2 DUT(.A(A),.B(B),.C(C));
+nand2 DUT(.A(A),.B(B),.C(C));
 
 
 initial
@@ -23,7 +23,7 @@ initial
     B = 1'b0;
     #1;
     //Check that C is correct
-    assert(C == 1'b0);
+    assert(C == 1'b1);
     
     //Wait 5 ns
     #5;
@@ -54,7 +54,7 @@ initial
     B = 1'b1;
     #1;
     //Check that C is correct
-    assert(C == 1'b1);
+    assert(C == 1'b0);
     
     #5; 
     
